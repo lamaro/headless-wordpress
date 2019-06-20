@@ -1,14 +1,15 @@
 import React from 'react';
+import GridNoticias from '../components/GridNoticas';
 
 class Home extends React.Component {
     constructor(){
         super()
         this.state = {
+            news:{},
             isLoading: true
         }
     }
     
-
     async getNoticias() {
           this.setState({
               isLoading:true
@@ -48,7 +49,7 @@ class Home extends React.Component {
     render(){
         return(
             <div>
-                {!this.state.isLoading && this.rollNews()}
+                {!this.state.isLoading && <GridNoticias noticias={this.state.news}/>}
             </div>
         )
     }
