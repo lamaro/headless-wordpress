@@ -33,19 +33,6 @@ class Home extends React.Component {
         this.getNoticias()
     }
 
-    rollNews(){
-        const roll = this.state.news.map(newsItem => {
-            return(
-                <div className="newsItem" key={newsItem.ID}>
-                    {newsItem.post_title}
-                    {newsItem.acf.bajada}
-                    <img src={newsItem.image} alt={newsItem.post_title}/>
-                </div>
-            )
-        })
-        return roll
-    }
-
     render(){
         return(
             <div>
